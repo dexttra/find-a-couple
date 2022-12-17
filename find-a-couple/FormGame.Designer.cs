@@ -56,6 +56,8 @@
             this.новаяИграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -99,6 +101,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::find_a_couple.Properties.Resources.background;
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.pictureBox20);
             this.panel1.Controls.Add(this.pictureBox19);
             this.panel1.Controls.Add(this.pictureBox18);
@@ -328,25 +331,28 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Crimson;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.новаяИграToolStripMenuItem,
-            this.newGameToolStripMenuItem});
+            this.newGameToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(83, 450);
+            this.menuStrip1.Size = new System.Drawing.Size(115, 450);
             this.menuStrip1.TabIndex = 47;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // новаяИграToolStripMenuItem
             // 
             this.новаяИграToolStripMenuItem.Name = "новаяИграToolStripMenuItem";
-            this.новаяИграToolStripMenuItem.Size = new System.Drawing.Size(70, 4);
+            this.новаяИграToolStripMenuItem.Size = new System.Drawing.Size(113, 4);
             // 
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(70, 19);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -355,6 +361,27 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Crimson;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.DarkBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 423);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(76, 18);
+            this.linkLabel1.TabIndex = 48;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Creator";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // FormGame
             // 
@@ -425,6 +452,8 @@
         private System.Windows.Forms.ToolStripMenuItem новаяИграToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

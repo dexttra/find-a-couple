@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace find_a_couple
 {
@@ -78,6 +79,8 @@ namespace find_a_couple
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            hide();
+            openedCount = 0;
             Random rnd;
             rnd = new Random();
             for (int i = 0; i < 10; i++)
@@ -104,12 +107,15 @@ namespace find_a_couple
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             PictureBox p = (PictureBox)sender; // Универсальный тип-объект преобразовываем в конкретный
-            int index = Convert.ToInt32(p.Tag); // Присваиваем индексы с номерами тегов
+            int index = Convert.ToInt32(p.Tag); // Присваиваем индексам номера тегов
+            if (openedCount == 1)
+            {
+                if (opened[0] == index) return;
+            }
             if (openedCount == 2)
             {
                 hide();
@@ -127,7 +133,17 @@ namespace find_a_couple
                     hide();
                 }
             }
-            p.BackgroundImage = imageList1.Images[gamePairs[index]];
+            p.BackgroundImage = imageList1.Images[gamePairs[index]];           
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           Process.Start("https://github.com/dlaliev");
         }
     }
 }
