@@ -100,7 +100,7 @@ namespace find_a_couple
                 if (num1 == num2) continue;
                 if (gamePairs[num1] == -1 && gamePairs[num2] == -1)
                 {
-                    gamePairs[num1] = gamePairs[num2] = pairs[usedPairs];
+                    gamePairs[num1] = gamePairs[num2] = pairs[usedPairs]; 
                     usedPairs++;
                 }
             }
@@ -112,7 +112,7 @@ namespace find_a_couple
         {
             PictureBox p = (PictureBox)sender; // Универсальный тип-объект преобразовываем в конкретный
             int index = Convert.ToInt32(p.Tag); // Присваиваем индексам номера тегов
-            if (openedCount == 1)
+            if (openedCount == 1) // Проверка на нажатие одного и того же поля дважды
             {
                 if (opened[0] == index) return;
             }
@@ -127,7 +127,7 @@ namespace find_a_couple
             {
                 if (gamePairs[opened[0]] == gamePairs[opened[1]])
                 {
-                    picBoxArray[opened[0]].Visible = false;
+                    picBoxArray[opened[0]].Visible = false; // Прячем верно открытые картинки
                     picBoxArray[opened[1]].Visible = false;
                     openedCount = 0;
                     hide();
