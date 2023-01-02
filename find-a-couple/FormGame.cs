@@ -16,6 +16,8 @@ namespace find_a_couple
         int[] pairs;
         int[] opened;
         int[] gamePairs;
+        int stepsCounter;
+        int winCheck;
         PictureBox[] picBoxArray;
         int openedCount;
         public FormGame()
@@ -45,7 +47,7 @@ namespace find_a_couple
             picBoxArray[16] = pictureBox17;
             picBoxArray[17] = pictureBox18;
             picBoxArray[18] = pictureBox19;
-            picBoxArray[19] = pictureBox20;
+            picBoxArray[19] = pictureBox20;       
         }
         public void hide()
         {
@@ -80,6 +82,9 @@ namespace find_a_couple
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             hide();
+            winCheck = 0;
+            stepsCounter = 0;
+            labelSteps.Text = "Количество ходов: " + stepsCounter.ToString();
             openedCount = 0;
             Random rnd;
             rnd = new Random();
@@ -112,14 +117,16 @@ namespace find_a_couple
         {
             PictureBox p = (PictureBox)sender; // Универсальный тип-объект преобразовываем в конкретный
             int index = Convert.ToInt32(p.Tag); // Присваиваем индексам номера тегов
-            if (openedCount == 1) // Проверка на нажатие одного и того же поля дважды
+            if (openedCount == 1) // Проверка на нажатие одной и той же карточки дважды
             {
                 if (opened[0] == index) return;
             }
             if (openedCount == 2)
             {
+                stepsCounter++;
+                labelSteps.Text = "Количество ходов: " + stepsCounter.ToString();
                 hide();
-                openedCount = 0;
+                openedCount = 0;              
             }
             opened[openedCount] = index; // Фиксируем тег открытой картинки
             openedCount++; 
@@ -127,12 +134,16 @@ namespace find_a_couple
             {
                 if (gamePairs[opened[0]] == gamePairs[opened[1]])
                 {
-                    picBoxArray[opened[0]].Visible = false; // Прячем верно открытые картинки
+                    stepsCounter++;
+                    labelSteps.Text = "Количество ходов: " + stepsCounter.ToString();
+                    picBoxArray[opened[0]].Visible = false; // Скрываем верно открытые картинки
                     picBoxArray[opened[1]].Visible = false;
+                    winCheck++;
                     openedCount = 0;
-                    hide();
+                    stepsCounter++;                  
                 }
             }
+            if (winCheck == 10) MessageBox.Show("Победа!");
             p.BackgroundImage = imageList1.Images[gamePairs[index]];           
         }
 
@@ -145,5 +156,7 @@ namespace find_a_couple
         {
            Process.Start("https://github.com/dlaliev");
         }
+
+     
     }
 }
