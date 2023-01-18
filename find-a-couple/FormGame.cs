@@ -49,7 +49,7 @@ namespace find_a_couple
             picBoxArray[18] = pictureBox19;
             picBoxArray[19] = pictureBox20;       
         }
-        public void hide()
+        public void CardsHide()
         {
             pictureBox1.BackgroundImage = imageList1.Images[10];
             pictureBox2.BackgroundImage = imageList1.Images[10];
@@ -75,13 +75,13 @@ namespace find_a_couple
 
         private void FormGame_Load(object sender, EventArgs e)
         {
-            hide();
+            CardsHide();
             newGameToolStripMenuItem_Click(null, null);
         }
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hide();
+            CardsHide();
             winCheck = 0;
             stepsCounter = 0;
             labelSteps.Text = "Количество ходов: " + stepsCounter.ToString();
@@ -125,7 +125,7 @@ namespace find_a_couple
             {
                 stepsCounter++;
                 labelSteps.Text = "Количество ходов: " + stepsCounter.ToString();
-                hide();
+                CardsHide();
                 openedCount = 0;              
             }
             opened[openedCount] = index; // Фиксируем тег открытой картинки
