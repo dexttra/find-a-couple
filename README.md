@@ -32,3 +32,5 @@
   - Добавить допустимое количество неправильных ходов, после достижения игроком этого числа игра заканчивается проигрышем.
 
 ### ДЕМОНСТРАЦИЯ ПРОЕКТА
+![Демонстрация игры](https://github.com/dlaliev/find-a-couple/blob/master/find-a-couple/Resources/demonstration.png?raw=true)
+
