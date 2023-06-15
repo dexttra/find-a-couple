@@ -33,4 +33,5 @@
 
 ### ДЕМОНСТРАЦИЯ ПРОЕКТА
 ![Демонстрация игры](https://github.com/dlaliev/find-a-couple/blob/master/find-a-couple/Resources/demonstration.png?raw=true)
-
+### ПРЕЗЕНТАЦИЯ ПРОЕКТА
+https://docs.google.com/presentation/d/1eSLF9_n8F39v6DHIg0EHTn06zuMoc3bbienEIZqqcMg/edit?usp=sharing
