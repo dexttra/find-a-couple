@@ -1,4 +1,4 @@
-## 🎴 Desktop game “Find a couple”
+![image](https://github.com/user-attachments/assets/a29289ba-5f6f-47fc-9c77-9a13c781717d)## 🎴 Desktop game “Find a couple”
 
 ### 💟 Technical Task
 
@@ -31,5 +31,6 @@ A single-player game on a grid field with an even number of elements 5x4. The ga
   - Add a timer after which incorrectly opened pairs will be flipped back.
   - Add a limit to the number of incorrect moves, after reaching which the player loses the game.
 
-#### Project Demostration
+#### 💟 Project Demostration
+![Game](https://github.com/user-attachments/assets/74ce103c-79aa-4d5e-8312-6bb05bb7f74f)
 
