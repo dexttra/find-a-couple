@@ -1,6 +1,6 @@
-![image](https://github.com/user-attachments/assets/a29289ba-5f6f-47fc-9c77-9a13c781717d)## 🎴 Desktop game “Find a couple”
+## 🎴 Desktop game “Find a couple”
 
-### 💟 Technical Task
+### Technical Task
 
 #### 💟 Purpose of Development
 
