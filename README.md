@@ -1,37 +1,35 @@
-## Проект “Найди пару”
+## 🎴 Desktop game “Find a couple”
 
-### ТЕХНИЧЕСКОЕ ЗАДАНИЕ
+### 💟 Technical Task
 
-**1. Назначение разработки**
+#### 💟 Purpose of Development
 
-Игра для одного игрока на клетчатом поле с четным количеством элементов 5x4. В игре спрятаны 10 пар картинок под рубашками карт. Игрок должен открывать одинаковые пары карт. Он нажимает на карточки, после чего вместо рубашек появляются картинки. Если они совпали, то обе карточки исчезают с игрового поля. В ином случае картинки заменяются рубашками карт, как было изначально. После нахождения всех пар картинок игра заканчивается победой. Сверху от игрового поля находится игровое меню, с помощью которого игрок может начать новую игру или выйти из неё.
+A single-player game on a grid field with an even number of elements 5x4. The game hides 10 pairs of images under the backs of cards. The player must reveal matching pairs of cards. They click on the cards, revealing the images instead of the card backs. If they match, both cards disappear from the game field. Otherwise, the images are replaced by the card backs as initially. The game ends in a victory when all pairs of images are found. Above the game field is a game menu, allowing the player to start a new game or exit.
 
-**2. Функционал**
+#### 💟 Functionality
 
-- Отрисовка клетчатого поля 5x4.
-- Случайное заполнение игрового поля карточками в начале новой игры.
-- Показывать скрытую картинку при нажатии на карточку.
-- При нажатии на две одинаковые картинки, скрывать их с игрового поля.
-- При нажатии на две разные картинки, заменять их обратно рубашками карточек.
-- Выводить сообщение о выигрыше, когда все картинки будут скрыты.
+- Drawing a 5x4 grid field.
+- Randomly filling the game field with cards at the start of a new game.
+- Showing the hidden image when clicking on a card.
+- Hiding matching cards from the game field when two identical images are clicked.
+- Replacing images back with card backs when two different images are clicked.
+- Displaying a victory message when all images are hidden.
 
-**3. Этапы реализации**
+#### 💟 Implementation Stages
 
-- Версия 0.1:
-  - Рисовать клетчатое поле 5x4.
-  - Отображать на экране закрытые карточки.
-  - При нажатии на карточку, показывать скрытую под ней картинку.
-  - При нажатии на две одинаковые картинки, скрывать их с игрового поля.
+- Version 0.1:
+  - Draw a 5x4 grid field.
+  - Display closed cards on the screen.
+  - Show the hidden image under a card when clicked.
+  - Hide matching cards from the game field when two identical images are clicked.
 
-- Версия 0.2:
-  - Добавить счетчик ходов игрока.
-  - Выводить сообщение о выигрыше после скрытия всех картинок с игрового поля.
+- Version 0.2:
+  - Add a move counter for the player.
+  - Display a victory message after all images are hidden from the game field.
 
-- Версия 0.3:
-  - Добавить таймер, после окончания которого неверно открытые пары будут перевернуты.
-  - Добавить допустимое количество неправильных ходов, после достижения игроком этого числа игра заканчивается проигрышем.
+- Version 0.3:
+  - Add a timer after which incorrectly opened pairs will be flipped back.
+  - Add a limit to the number of incorrect moves, after reaching which the player loses the game.
 
-### ДЕМОНСТРАЦИЯ ПРОЕКТА
-![Демонстрация игры](https://github.com/dlaliev/find-a-couple/blob/master/find-a-couple/Resources/demonstration.png?raw=true)
-### ПРЕЗЕНТАЦИЯ ПРОЕКТА
-https://docs.google.com/presentation/d/1eSLF9_n8F39v6DHIg0EHTn06zuMoc3bbienEIZqqcMg/edit?usp=sharing
+#### Project Demostration
+
