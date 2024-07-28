@@ -154,7 +154,7 @@ namespace find_a_couple
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           Process.Start("https://github.com/dlaliev");
+           Process.Start("https://github.com/dexttra");
         }
 
      
